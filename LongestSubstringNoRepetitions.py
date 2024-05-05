@@ -12,7 +12,6 @@ def lengthOfLongestSubstring(string):
             l = max(l, lastSeen[char] + 1) # If you have already seen a repeated character and updated l, the next time another character repeats itself, 
                                            # instead of moving forward the left index, it will move backwards as in s = 'abba'. To avoid this you need to 
                                            # use the max function
-            print(l)
         if longest[1] - longest[0] < r - l + 1: 
             longest = [l, r+1]  # The longest non-repeating substring doesn't update if it has the same length
         lastSeen[char] = r  # This line updates the position of the last time we saw that particular character
